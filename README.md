@@ -34,6 +34,22 @@ Développée avec Node.js, Express, Sequelize et SQLite, l'API suit une architec
 - `GET /api/v1/blagues/:id` : Récupérer une blague spécifique
 - `GET /api/v1/blagues/random` : Obtenir une blague aléatoire
 
+###  Structures
+
+simplon-back/
+├── config/
+│   └── database.js
+├── controllers/
+│   └── blague.controller.js
+├── models/
+│   └── blague.model.js
+├── routes/
+│   └── blague.routes.js
+├── .gitignore
+├── app.js
+├── package.json
+└── server.js
+
 ###  Versionnement de l'API
 
 > [!IMPORTANT]

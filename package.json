@@ -1,11 +1,10 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "description": "",
+  "description": " API qui permet d'afficher des blagues aléatoires ",
   "license": "ISC",
-  "author": "VES Narson Kevine",
-  "type": "commonjs",
-  "main": "server.js",
+  "author": "YVES Narson Kevine",
+  "main": "server.mjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   }
