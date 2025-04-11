@@ -34,6 +34,22 @@ Développée avec Node.js, Express, Sequelize et SQLite, l'API suit une architec
 - `GET /api/v1/blagues/:id` : Récupérer une blague spécifique
 - `GET /api/v1/blagues/random` : Obtenir une blague aléatoire
 
+###  Structures
+
+simplon-back/
+├── config/
+│   └── database.js
+├── controllers/
+│   └── blague.controller.js
+├── models/
+│   └── blague.model.js
+├── routes/
+│   └── blague.routes.js
+├── .gitignore
+├── app.js
+├── package.json
+└── server.js
+
 ###  Versionnement de l'API
 
 > [!IMPORTANT]
@@ -67,44 +83,10 @@ npm run dev
 > **Important :** L'API est déployée via Render.com :
 > [Lien vers l'API déployée](#)
 
-##  Frontend
-
-Application développée en HTML/CSS/JS vanilla, avec une intégration responsive.
-
-###  Fonctionnalités
-
-- Landing page avec branding Carambar & Co
-- Affichage d'une blague aléatoire au clic
-- Design responsive
-
-###  Technologies Utilisées
-
-- HTML5 / CSS3
-- JavaScript Vanilla
-- API REST
-
-###  Installation et Lancement (dev)
-
-```bash
-# Cloner le repo
-git clone https://github.com/gastsar/simplon-front.git
-cd simplon-front
-
-# Lancer en local via Live Server ou équivalent
-```
-> [!NOTE]
-> **Astuce :** Tu peux utiliser l'extension Live Server sur VS Code pour tester en local.
-
-###  Déploiement
-
-> [!NOTE]
-> **Note :** Le frontend est déployé via GitHub Pages :
-> [Lien vers l'application web](#)
-
 ##  Prérequis
 
 - Node.js (v16+)
-- npm ou yarn
+- npm ou yarn ou pnpm
 - Git
 
 ##  Auteur
@@ -116,7 +98,4 @@ Développé par :
 ##  Licence
 
 Ce projet est sous licence ***.
-
-
-
 
