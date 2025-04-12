@@ -1,10 +1,8 @@
-import http from 'http';
+import express from 'express';
 
-const server = http.createServer((req, res) => {
-  res.writeHead(200, { 'Content-Type': 'text/plain' });
-  res.end('Testing server response\n');
+export const app = express();
+
+app.use((req, res) => {
+   res.json({ message: 'Votre requête a bien été reçue !' }); 
 });
 
-server.listen(process.env.PORT || 3001, () => { 
-  console.log('Server running at http://localhost:3001/');
-});
