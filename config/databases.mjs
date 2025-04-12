@@ -1,3 +1,8 @@
+/**
+ * @file databases.mjs
+ * @description This file contains the configuration for the SQLite database using Sequelize ORM.
+ * ! Resources Doc Sequelize - https://sequelize.org/docs/v7/databases/sqlite/
+ */
 import { Sequelize } from "sequelize";
 
 // Initialiser la base de données SQLite
