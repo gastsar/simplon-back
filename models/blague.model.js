@@ -6,7 +6,7 @@
 import { DataTypes } from 'sequelize';
 import { sequelize } from '../config/databases.mjs';
 
-const Blague = sequelize.define('Blague', {
+export const Blague = sequelize.define('Blague', {
   // ID est géré automatiquement par Sequelize
   titre: {
     type: DataTypes.STRING,
@@ -27,5 +27,3 @@ const Blague = sequelize.define('Blague', {
   timestamps: true, 
   tableName: 'blagues' // Nom de la table dans la base de données
 });
-
-module.exports = Blague;
