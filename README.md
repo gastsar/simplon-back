@@ -95,6 +95,12 @@ Développé par :
 - Yves Narson Kévine
 - [github.com/gastsar](https://github.com/gastsar)
 
+## Ressources
+
+-[Sequelize (v6-stable)](https://sequelize.org/docs/v6/)
+-[IUT Belfort-Montbéliard](https://cours-info.iut-bm.univ-fcomte.fr/upload/supports/S3/web/cot%20serveur/R307/Introduction%20a%20Sequelize%20ORM.pdf)
+-[IUT Belfort-Montbéliard](https://cours-info.iut-bm.univ-fcomte.fr/upload/supports/S3/web/cot%20serveur/R307/Introduction%20Sequelize%20et%20ORM%20dans%20Node.js.pdf)
+
 ##  Licence
 
 Ce projet est sous licence ***.
