@@ -1,3 +1,9 @@
+/**
+ * Contrôleur pour gérer les blagues
+ * @file blague.controller.mjs
+ * @description Contient les fonctions pour créer, récupérer et gérer les blagues.
+ * @description Utilise Sequelize pour interagir avec la base de données.
+ */
 import { sequelize } from '../config/database.mjs';
 import { Blague } from '../models/blague.model.mjs';
 
@@ -48,7 +54,7 @@ export const create = async (req, res) => {
 // Récupérer toutes les blagues
 export const findAll = async (req, res) => {
   try {
-    const blagues = await Blague.findAll(); // Plus de condition indéfinie
+    const blagues = await Blague.findAll(); 
     return res.status(200).json({
       success: true,
       count: blagues.length,

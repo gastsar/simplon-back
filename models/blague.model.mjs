@@ -1,6 +1,7 @@
 /**
  * @file blague.model.js
  * @description Modèle de données pour les blagues
+ * @description Utilise Sequelize pour interagir avec la base de données.
  */
 
 import { DataTypes } from 'sequelize';
@@ -23,7 +24,7 @@ export const Blague = sequelize.define('Blague', {
     }
   }
 }, {
-  // Options supplémentaires
+
   timestamps: true, 
   tableName: 'blagues' // Nom de la table dans la base de données
 });
