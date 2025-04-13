@@ -3,6 +3,8 @@
  * @description Configuration de la base de données SQLite avec Sequelize.
  */
 import { Sequelize } from 'sequelize';
+import dotenv from 'dotenv';
+dotenv.config(); // charge le .env dans process.env
 
 // Initialiser la base de données SQLite
 export const sequelize = new Sequelize({

@@ -11,3 +11,9 @@ package-lock.json
 
 # Répertoires IDE
 .vscode/
+
+# environnement
+.env
+.env.development
+.env.example
+.env.production
