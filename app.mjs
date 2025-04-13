@@ -44,6 +44,8 @@ app.get('/', (req, res) => {
 });
 
 // Utiliser les routes avec le préfixe des variables d'environnement
+
+
 app.use(`${API_PREFIX}/blagues`, blagueRoutes);
 
 // Middleware pour gérer les routes non trouvées
