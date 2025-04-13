@@ -1,0 +1,13 @@
+# Dépendances
+node_modules/
+package-lock.json
+
+# Base de données
+*.sqlite
+*.sqlite3
+
+# Fichiers système
+.DS_Store
+
+# Répertoires IDE
+.vscode/
