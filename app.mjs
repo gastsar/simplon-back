@@ -1,47 +1,52 @@
+/**
+ * @file app.mjs
+ * @description Point d'entrée de l'application Express
+ * @description Gère la configuration de l'application, les middlewares et les routes.
+ */
+
 import express from 'express';
+import bodyParser from 'body-parser';
 import cors from 'cors';
+import dotenv from 'dotenv';
+import { testConnection } from './config/database.mjs';
 import blagueRoutes from './routes/blague.route.mjs';
 
+// Charger les variables d'environnement selon l'environnement
+const nodeEnv = process.env.NODE_ENV || 'development';
+dotenv.config({ path: `.env.${nodeEnv}` });
+
+// Initialiser l'application Express
 export const app = express();
 
-// Middlewares globaux
+// Middlewares
 app.use(cors());
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-app.disable('x-powered-by');
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
+// Tester la connexion à la base de données
+testConnection();
 
+// Récupérer le préfixe API des variables d'environnement
+const API_PREFIX = process.env.API_PREFIX || '/api/v1';
 
-// Logging simple
-app.use((req, res, next) => {
-  const date = new Date().toISOString();
-  console.log(`[${date}] ${req.method} ${req.url}`);
-  if (req.body && Object.keys(req.body).length > 0) {
-    console.log(' Request Body:', JSON.stringify(req.body, null, 2));
-  }
-  next();
-});
-
-
-// Route d'accueil
+// Route racine
 app.get('/', (req, res) => {
   res.json({
     message: "Bienvenue sur l'API de blagues",
+    environment: nodeEnv,
     endpoints: {
-      getAllJokes: "GET /api/v1/blagues",
-      getJokeById: "GET /api/v1/blagues/:id",
-      getRandomJoke: "GET /api/v1/blagues/random",
-      createJoke: "POST /api/v1/blagues"
+      getAllJokes: `GET ${API_PREFIX}/blagues`,
+      getJokeById: `GET ${API_PREFIX}/blagues/:id`,
+      getRandomJoke: `GET ${API_PREFIX}/blagues/random`,
+      createJoke: `POST ${API_PREFIX}/blagues`
     }
   });
 });
 
-// Routes spécifiques
-app.use('/api/v1/blagues', blagueRoutes);
+// Utiliser les routes avec le préfixe des variables d'environnement
+app.use(`${API_PREFIX}/blagues`, blagueRoutes);
 
-
-
-// 404
+// Middleware pour gérer les routes non trouvées
 app.use((req, res) => {
   res.status(404).json({
     success: false,
@@ -49,12 +54,13 @@ app.use((req, res) => {
   });
 });
 
-// Gestion des erreurs
+// Middleware de gestion des erreurs
 app.use((err, req, res, next) => {
-  console.error(' Error:', err.stack);
+  console.error(err.stack);
   res.status(500).json({
     success: false,
     message: "Une erreur est survenue sur le serveur",
-    error: process.env.NODE_ENV === 'development' ? err.message : {}
+    error: nodeEnv === 'development' ? err.message : {}
   });
 });
+

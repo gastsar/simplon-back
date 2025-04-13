@@ -7,8 +7,9 @@
   "main": "server.mjs",
   "type": "module",
   "scripts": {
-    "start": "node server.mjs",
-    "dev": "nodemon server.mjs",
+    "start": "NODE_ENV=production node server.mjs",
+    "dev": "NODE_ENV=development nodemon server.mjs",
+    "dev:win": "set NODE_ENV=development&& nodemon server.mjs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -21,6 +22,7 @@
   "dependencies": {
     "body-parser": "^2.2.0",
     "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
     "express": "^5.1.0",
     "sequelize": "^6.37.7",
     "sqlite3": "^5.1.7"
