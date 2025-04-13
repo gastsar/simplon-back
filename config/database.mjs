@@ -4,13 +4,13 @@
  */
 import { Sequelize } from 'sequelize';
 import dotenv from 'dotenv';
-dotenv.config(); // charge le .env dans process.env
+dotenv.config(); // Charge .env dans process.env
 
 // Initialiser la base de données SQLite
 export const sequelize = new Sequelize({
-  dialect: 'sqlite',
-storage: 'path/to/database.sqlite', // Chemin vers le fichier de base de données SQLite
-  logging: true
+  dialect: process.env.DB_DIALECT || 'sqlite',
+  storage: process.env.DB_STORAGE || './path/to/database.sqlite',
+  logging: process.env.DB_LOGGING === 'true' ? console.log : false
 });
 
 // Tester la connexion

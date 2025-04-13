@@ -5,9 +5,16 @@
 
 import { app } from './app.mjs';
 import { syncDatabase, testConnection } from './config/database.mjs';
+import dotenv from 'dotenv';
 
-const PORT = process.env.PORT || 3001;
+// Charger les variables d'environnement selon l'environnement
+const nodeEnv = process.env.NODE_ENV || 'development';
+dotenv.config({ path: `.env.${nodeEnv}` });
 
+// Définir le port à partir des variables d'environnement
+const PORT = process.env.PORT || 3000;
+
+// Fonction pour démarrer le serveur
 const startServer = async () => {
   try {
     // Tester la connexion à la base de données

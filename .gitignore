@@ -12,8 +12,14 @@ package-lock.json
 # Répertoires IDE
 .vscode/
 
-# environnement
+# Fichiers d'environnement
 .env
+.env.local
 .env.development
-.env.example
 .env.production
+.env.test
+
+# Logs
+logs
+*.log
+npm-debug.log*
