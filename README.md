@@ -13,7 +13,7 @@ Bienvenue sur le projet d'application web de blagues pour Carambar & Co ! Cette 
 
 > [!CAUTION]
 > - **Projet fourni par Simplon dans le cadre d’un test technique.**  
-> - Ce dépôt a un objectif **pédagogique** uniquement.  
+> - Ce dépôt a un objectif **pédagogique**.  
 > - Toute utilisation en dehors de ce contexte, notamment à des fins commerciales, devra être préalablement validée par Simplon.
 
 
@@ -60,24 +60,6 @@ simplon-back/
 
 Une documentation Swagger est disponible ici :
 - [Lien vers Swagger](https://app.swaggerhub.com/apis-docs/NarsonKevineYVES/carambarco/1.0.0)
-
-### ⚙ Installation et Lancement (dev)
-
-```bash
-# Cloner le repo
-git clone https://github.com/gastsar/simplon-back.git
-cd simplon-back
-
-# Installer les dépendances
-npm install
-
-# Migrer la base de données
-npm run migrate
-
-# Lancer le serveur de développement
-npm run dev
-```
-
 ###  Déploiement
 > [!IMPORTANT]
 > **Important :** L'API est déployée via Render.com :
@@ -92,6 +74,19 @@ npm run dev
 - npm ou yarn ou pnpm
 - Git
 
+### ⚙ Installation et Lancement (dev)
+
+```bash
+# Cloner le repo
+git clone https://github.com/gastsar/simplon-back.git
+cd simplon-back
+
+# Installer les dépendances
+npm install
+
+# Lancer le serveur de développement
+npm run dev
+```
 ##  Auteur
 
 Développé par :
