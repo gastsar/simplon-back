@@ -10,9 +10,7 @@ import { Blague } from '../models/blague.model.mjs';
 // Créer une nouvelle blague
 export const create = async (req, res) => {
   try {
-    console.log('Body reçu :', req.body);
-    console.log('Query params reçus:', req.query);
-    
+
     const titre = req.body?.titre || req.query?.titre;
     const contenu = req.body?.contenu || req.query?.contenu;
 
