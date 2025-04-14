@@ -83,6 +83,9 @@ npm run dev
 > **Important :** L'API est déployée via Render.com :
 > [Lien vers l'API déployée](https://simplon-back.onrender.com/)
 
+> [!IMPORTANT]
+> **Important :** Le frontend est déployé via githup page :
+> [Lien vers le site déployé](https://gastsar.github.io/simplon-front/)
 ##  Prérequis
 
 - Node.js (v16+)
