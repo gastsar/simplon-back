@@ -91,8 +91,7 @@ npm run dev
 
 Développé par :
 - Yves Narson Kévine
-- [github.com/gastsar](https://github.com/gastsar)
-
+gfsdhg
 ## Ressources
 
 -[Sequelize (v6-stable)](https://sequelize.org/docs/v6/)
