@@ -91,7 +91,6 @@ npm run dev
 
 Développé par :
 - Yves Narson Kévine
-- [github.com/gastsar](https://github.com/gastsar)
 
 ## Ressources
 
